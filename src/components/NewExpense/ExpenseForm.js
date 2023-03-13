@@ -67,6 +67,7 @@ const ExpenseForm = (props) => {
             type="text"
             value={enteredTtile}
             onChange={titleChangeHandler}
+            placeholder="Title"
           />
         </div>
         <div className="new-expense__control">
@@ -77,6 +78,7 @@ const ExpenseForm = (props) => {
             step="0.01"
             onChange={amountChangeHandler}
             value={entredAmount}
+            placeholder="Amount"
           />
         </div>
         <div className="new-expense__control">
@@ -91,6 +93,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancle}>
+          Cancle
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
